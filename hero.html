@@ -166,31 +166,12 @@
       text-decoration: none;
       color: var(--black);
     }
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--orange);
-      display: grid;
-      place-items: center;
-      color: var(--black);
-    }
-    .logo-mark .icon { width: 26px; height: 26px; }
-    .logo-text {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 22px;
-      line-height: 0.95;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .logo-text small {
-      display: block;
-      font-family: var(--body);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      color: var(--orange-dark);
+    .logo-img { width: auto; height: 72px; }
+    .footer .logo-img {
+      height: 64px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 6px 10px;
     }
 
     .nav { display: flex; align-items: center; gap: 28px; }
@@ -286,15 +267,26 @@
         radial-gradient(circle at 30% 25%, rgba(255, 122, 0, 0.35), transparent 55%),
         linear-gradient(160deg, #2a2a2a, #111);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      display: grid;
-      place-items: center;
-      /* Swap this block for a real photo: <img src="..." alt="..." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px"> */
     }
-    .hero-visual .truck {
-      width: 62%;
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+    .fleet {
+      margin: 40px 0 0;
+      max-width: 460px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .fleet img {
+      width: 100%;
       height: auto;
-      color: var(--orange);
-      stroke-width: 1.4;
+      border-radius: 10px;
     }
     .rating-card {
       position: absolute;
@@ -715,7 +707,6 @@
       gap: 36px;
     }
     .footer .logo { color: var(--white); }
-    .footer .logo-text small { color: var(--orange); }
     .footer p { margin-top: 16px; max-width: 320px; }
     .footer h4 {
       margin: 0 0 16px;
@@ -864,8 +855,7 @@
   <header class="header" id="header">
     <div class="container">
       <a href="#top" class="logo" aria-label="Progressive Transportation home">
-        <span class="logo-mark"><i data-lucide="truck" class="icon"></i></span>
-        <span class="logo-text">Progressive<br>Transportation<small>Moving · Hauling · Delivery</small></span>
+        <img class="logo-img" src="images/progressive-logo.png" alt="Progressive Transportation" width="800" height="800">
       </a>
 
       <nav class="nav" id="nav" aria-label="Primary">
@@ -910,7 +900,7 @@
         </div>
 
         <div class="hero-visual">
-          <i data-lucide="truck" class="truck" aria-hidden="true"></i>
+          <img class="hero-photo" src="images/delivery-hero.webp" alt="Progressive Transportation crew loading a box truck" width="1600" height="1067">
           <div class="rating-card" aria-label="Rated 4.9 out of 5">
             <div class="score">4.9</div>
             <div>
@@ -1037,6 +1027,10 @@
         <span class="eyebrow">Why Progressive</span>
         <h2 class="section-title" id="why-title">The Difference Is in the Details</h2>
         <p class="section-intro">We are a small team that treats every household and business like our own.</p>
+
+        <figure class="fleet">
+          <img src="images/fleet-truck.webp" alt="Progressive Transportation 26-foot box truck" width="1000" height="1000" loading="lazy">
+        </figure>
 
         <div class="why-grid">
           <div class="why-item">
@@ -1225,8 +1219,7 @@
       <div class="footer-grid">
         <div>
           <a href="#top" class="logo" aria-label="Progressive Transportation home">
-            <span class="logo-mark"><i data-lucide="truck" class="icon"></i></span>
-            <span class="logo-text">Progressive<br>Transportation<small>Moving · Hauling · Delivery</small></span>
+            <img class="logo-img" src="images/progressive-logo.png" alt="Progressive Transportation" width="800" height="800">
           </a>
           <p>Reliable moving, junk removal, and cargo van services with honest pricing and careful crews.</p>
           <div class="social" style="margin-top:20px">
